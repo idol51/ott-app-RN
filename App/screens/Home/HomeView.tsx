@@ -3,6 +3,7 @@ import { Image, ScrollView, Text, View } from 'react-native'
 import { styles } from './styles'
 import CategoryCard from '../../components/Card/CategoryCard'
 import { Tag } from '../../components/Button'
+import HomeCarousel from './HomeCarousel'
 
 export default function HomeView() {
   return (
@@ -17,6 +18,8 @@ export default function HomeView() {
             </View>
 
             <Text style={styles.heading}>Now Playing</Text>
+
+            <HomeCarousel />
 
             <View style={{ marginBottom: 32 }}>
                 <Text style={styles.categoryTitle}>Popular</Text>

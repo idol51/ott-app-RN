@@ -1,6 +1,7 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
 import { colors, fontFamily, fontSize } from "../../assets/styles";
 
+const windowWidth = Dimensions.get('window').width
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -26,5 +27,34 @@ export const styles = StyleSheet.create({
     },
     scrollView: {
         paddingHorizontal: 16,
-    }
+    },
+    carouselWrapper: {
+        flex: 1,
+        alignItems: 'center',
+        gap: 12,
+        paddingVertical: 12
+    },
+    carouselImage: {
+        flex: 1,
+        aspectRatio: 2/3,
+        borderRadius: 16,
+    },
+    carouselDetails: { 
+        flexDirection: 'row', 
+        width: windowWidth * 0.66,
+        gap: 12
+    },
+    carouselTitle: { 
+        color: colors.text, 
+        fontSize: fontSize.f2,
+        fontFamily: fontFamily.semibold,
+        lineHeight: 20
+    },
+    carouselSubTitle: { 
+        color: colors.text, 
+        fontSize: fontSize.f5,
+        lineHeight: 16,
+        fontFamily: fontFamily.regular
+    },
+
 })
