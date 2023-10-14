@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
     },
     pillButtonText: {
         color: colors.text,
-        fontSize: fontSize.f6,
+        fontSize: fontSize.f5,
         fontFamily: fontFamily.regular
     },
     tag: {

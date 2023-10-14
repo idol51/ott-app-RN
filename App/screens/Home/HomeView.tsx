@@ -1,7 +1,7 @@
 import React from 'react'
 import { Image, ScrollView, Text, View } from 'react-native'
 import { styles } from './styles'
-import CategoryCard from '../../components/Card/CategoryCard'
+import { CategoryCard } from '../../components/Card'
 import { Tag } from '../../components/Button'
 import HomeCarousel from './HomeCarousel'
 
@@ -9,7 +9,7 @@ export default function HomeView() {
   return (
     <View style={styles.container}>
         <ScrollView>
-            <Image style={{ marginHorizontal: 28 }} source={require('../../assets/images/close_icon.png')} />
+            <Image style={{ marginHorizontal: 28 }} source={require('../../assets/images/app_logo.png')} />
             <View style={styles.categoriesWrapper}>
                 <Tag>Popular</Tag>
                 <Tag>Upcoming</Tag>
@@ -20,6 +20,7 @@ export default function HomeView() {
             <Text style={styles.heading}>Now Playing</Text>
 
             <HomeCarousel />
+
 
             <View style={{ marginBottom: 32 }}>
                 <Text style={styles.categoryTitle}>Popular</Text>

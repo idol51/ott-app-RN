@@ -27,5 +27,21 @@ export const styles = StyleSheet.create({
         fontSize: fontSize.f4,
         fontFamily: fontFamily.regular
     },
-
+    castWrapper: {
+        padding: 8,
+        width: 75,
+        gap: 8
+    },
+    castImage: {
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+        borderRadius: 100,
+    },
+    castText: {
+        color: colors.text,
+        textAlign: 'center',
+        fontSize: fontSize.f7,
+        fontFamily: fontFamily.regular
+    }
 })

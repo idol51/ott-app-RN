@@ -34,7 +34,10 @@ export default function HomeCarousel() {
                             <Text style={styles.carouselTitle} numberOfLines={1}>John Wick</Text>
                             <Text style={styles.carouselSubTitle} numberOfLines={1}>Chapter 4</Text>
                         </View>
-                        <PillButton style={{ paddingHorizontal: 16 }}>Watch Trailer</PillButton>
+                        <PillButton style={{ paddingHorizontal: 16 }}>
+                            <Image style={{ width: 16, height: 16 }} source={require('../../assets/images/video_icon.png')} />
+                            {'  Watch Trailer'}
+                        </PillButton>
                     </View>
                     
                 </View>
