@@ -1,14 +1,14 @@
 import React from 'react'
-import { Image, Text, View } from 'react-native'
+import { Image, ImageSourcePropType, Text, TouchableOpacity, View } from 'react-native'
 import { styles } from './styles'
 
-export function ExploreCard({ image, name }: { image: any, name: string }) {
+export function ExploreCard({ image, name, onPress }: { image: ImageSourcePropType, name: string, onPress?: () => void }) {
   return (
-    <View style={styles.exploreWrapper}>
+    <TouchableOpacity style={styles.exploreWrapper} onPress={onPress}>
         <View style={styles.commonImageWrapper}>
-            <Image style={styles.commonImage} source={image} />
+            <Image style={styles.commonImage} source={image} alt='Thumbnail' />
         </View>
         <Text style={styles.commonText}>{name}</Text>
-    </View>
+    </TouchableOpacity>
   )
 }

@@ -21,7 +21,7 @@ export default function HomeRoute() {
   return (
     <Navigator
         screenOptions={{
-            headerShown: false,
+          headerShown: false,
             tabBarStyle: styles.bottomTab,
             tabBarShowLabel: false
         }}

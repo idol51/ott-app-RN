@@ -2,12 +2,13 @@ import { NavigationContainer } from '@react-navigation/native'
 import React from 'react'
 import UserRoute from './UserRoute';
 import AuthRoute from './AuthRoute';
+import { useUserContext } from '../context/UserContext';
 
 export default function Routes() {
-    const isSignIn = true;
+    const { isSignedIn } = useUserContext();
   return (
     <NavigationContainer>
-      { isSignIn ? <UserRoute /> : <AuthRoute /> }
+      { isSignedIn ? <UserRoute /> : <AuthRoute /> }
     </NavigationContainer>
   )
 }
