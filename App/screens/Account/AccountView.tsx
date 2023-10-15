@@ -2,6 +2,7 @@ import React from 'react'
 import { Image, Text, View } from 'react-native'
 import { styles } from './styles'
 import { List } from '../../components/Sections'
+import { PillButton } from '../../components/Button'
 
 export default function AccountView() {
   return (
@@ -17,16 +18,19 @@ export default function AccountView() {
             />
             <Text style={styles.userName}>John Doe</Text>
         </View>
-        <List 
-            title='Account'
-            descList={['Edit Profile','Change Password']}
-            image={require('../../assets/images/account_icon.png')}
-        />
-        <List 
-            title='Settings'
-            descList={['Themes','Permissions']}
-            image={require('../../assets/images/settings_icon.png')}
-        />
+        <View style={{ flex: 1 }}>
+            <List 
+                title='Account'
+                descList={['Edit Profile','Change Password']}
+                image={require('../../assets/images/account_icon.png')}
+            />
+            <List 
+                title='Settings'
+                descList={['Themes','Permissions']}
+                image={require('../../assets/images/settings_icon.png')}
+            />
+        </View>
+        <PillButton>Log Out</PillButton>
     </View>
   )
 }

@@ -1,13 +1,14 @@
 import React from 'react'
 import Carousel from 'react-native-reanimated-carousel'
-import { Dimensions, Image, Text, View } from 'react-native'
+import { Dimensions, Image, Text, TouchableOpacity, View } from 'react-native'
 import { colors, fontFamily } from '../../assets/styles'
 import { PillButton } from '../../components/Button'
 import { styles } from './styles'
+import { IMAGE_URL } from '../../config'
 
 const windowWidth = Dimensions.get('window').width
 
-export default function HomeCarousel() {
+export default function HomeCarousel({ data, navigation }: { data: any[], navigation: any }) {
   return (
     <Carousel
             loop
@@ -24,15 +25,15 @@ export default function HomeCarousel() {
             width={windowWidth}
             height={windowWidth * 1.2}
             autoPlay={true}
-            data={[...new Array(6).keys()]}
+            data={data}
             scrollAnimationDuration={1000}
-            renderItem={({ index }) => (
-                <View style={styles.carouselWrapper}>
-                    <Image source={require('../../assets/images/sample_poster.png')} style={styles.carouselImage} />
+            renderItem={({ index, item }) => (
+                <TouchableOpacity style={styles.carouselWrapper} onPress={() => navigation.navigate('Watch', { movieId: item.id })}>
+                    <Image source={{ uri: IMAGE_URL + item.backdrop_path }} style={styles.carouselImage} alt='Thumbnail' />
                     <View style={styles.carouselDetails}>
                         <View style={{ flex: 1 }}>
-                            <Text style={styles.carouselTitle} numberOfLines={1}>John Wick</Text>
-                            <Text style={styles.carouselSubTitle} numberOfLines={1}>Chapter 4</Text>
+                            <Text style={styles.carouselTitle} numberOfLines={1}>{item.title}</Text>
+                            <Text style={styles.carouselSubTitle} numberOfLines={1}>{item.original_title}</Text>
                         </View>
                         <PillButton style={{ paddingHorizontal: 16 }}>
                             <Image style={{ width: 16, height: 16 }} source={require('../../assets/images/video_icon.png')} />
@@ -40,7 +41,7 @@ export default function HomeCarousel() {
                         </PillButton>
                     </View>
                     
-                </View>
+                </TouchableOpacity>
             )}
         />
   )

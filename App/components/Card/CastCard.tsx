@@ -6,7 +6,7 @@ export function CastCard({ name, image }: { name: string, image: ImageSourceProp
   return (
     <View style={styles.castWrapper}>
         <View style={styles.commonImageWrapper}>
-            <Image style={styles.castImage} source={image} />
+            <Image style={styles.castImage} source={image} alt='Thumbnail' />
         </View>
         <Text style={styles.castText}>{name}</Text>
     </View>

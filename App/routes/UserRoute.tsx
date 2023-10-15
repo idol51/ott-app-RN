@@ -13,15 +13,12 @@ export default function UserRoute() {
       }}
     >
       <Screen
-        name='Watch'
-        component={Watch}
-      />
-      <Screen
         name='HomeRoute'
         component={HomeRoute}
-        options={{
-            headerShown: false
-        }}
+      />
+      <Screen
+        name='Watch'
+        component={Watch}
       />
     </Navigator>
   )

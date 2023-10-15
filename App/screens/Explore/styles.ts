@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
     scrollView: {
         flexDirection: 'row',
         flexWrap: 'wrap',
-        paddingVertical: 20
+        paddingVertical: 20,
+        justifyContent: 'center'
     }
 })

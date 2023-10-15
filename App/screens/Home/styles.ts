@@ -42,7 +42,8 @@ export const styles = StyleSheet.create({
     carouselDetails: { 
         flexDirection: 'row', 
         width: windowWidth * 0.66,
-        gap: 12
+        gap: 12,
+        zIndex: 10
     },
     carouselTitle: { 
         color: colors.text, 

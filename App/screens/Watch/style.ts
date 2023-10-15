@@ -1,5 +1,8 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
 import { colors, fontFamily, fontSize } from "../../assets/styles";
+
+const windowWidth = Dimensions.get('window').width
+
 
 export const styles = StyleSheet.create({
     container: {
@@ -71,5 +74,10 @@ export const styles = StyleSheet.create({
         color: colors.text,
         fontSize: fontSize.f4,
         fontFamily: fontFamily.regular
+    },
+    videoPlayer: {
+        width: windowWidth,
+        alignItems: 'center',
+        aspectRatio: 16/9,
     }
 })

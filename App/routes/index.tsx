@@ -4,7 +4,7 @@ import UserRoute from './UserRoute';
 import AuthRoute from './AuthRoute';
 
 export default function Routes() {
-    const isSignIn = true;
+    const isSignIn = false;
   return (
     <NavigationContainer>
       { isSignIn ? <UserRoute /> : <AuthRoute /> }
